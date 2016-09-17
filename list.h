@@ -28,8 +28,8 @@ typedef struct List_
 
 void list_init(pList list, void (*destroy)(void *data));
 void list_destroy(pList list);
-void list_show(pList list, void (*display)(void *data));
-void list_sort(pList list, int (*comp)(void *data_a, void *data_b), void (*swap)(void *data_a, void *data_b));
+void list_print(pList list, void (*display)(void *data));
+void list_sort(pList list, int (*comp)(void *data_a, void *data_b));
 int list_ins_next(pList list, pListElmt element, const void *data);
 int list_rem_next(pList list, pListElmt element, void **data);
 
